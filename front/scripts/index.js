@@ -15,7 +15,8 @@ const formatCards = require("./formatCards");
 //   });
 
 // ! AXIOS ↓↓↓
-axios.get("https://students-api.up.railway.app/movies")
+// axios.get("https://students-api.up.railway.app/movies")
+axios.get("http://localhost:3000/movies")
   .then( (informacion) => {
     const moviesCards = informacion.data.map(formatCards);
     moviesCards.forEach((movieHtml) => container.appendChild(movieHtml));
